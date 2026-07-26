@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Adotar é um Ato de Amor</title>
+
+    <!-- 🚀 Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DK2Q0Q1BSC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DK2Q0Q1BSC');
+    </script>
+
+    <!-- Importação dos ícones (Font Awesome) e Estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style02.css">
+</head>
+<body>
+
+    <header id="inicio">
+        <h1 class="main-title">GRATIDÃO POR TER CHEGADO ATÉ AQUI!</h1>
+    </header>
+
+    <main class="contact-container">
+        <h2>Fale Conosco</h2>
+
+        <p class="contact-text">
+            Se tiver alguma dúvida ou sugestão, fale com a gente pelo WhatsApp ou E-mail. 
+            Vamos fazer com que este site cresça e conscientize cada vez mais pessoas.
+        </p>
+
+        <div class="contact-links">
+            <!-- Link Direto para o WhatsApp -->
+            <a href="https://api.whatsapp.com/send?phone=5541996947574" target="_blank" rel="noopener noreferrer" title="Enviar WhatsApp" class="contact-icon whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            
+            <!-- Link Direto para o E-mail -->
+            <a href="mailto:rosana_ah@outlook.com" title="Enviar E-mail" class="contact-icon email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <p class="contact-text email-text">
+            Ou, se preferir, copie nosso e-mail: <br>
+            <strong>rosana_ah@outlook.com</strong>
+        </p>
+
+        <a href="index.html" class="button-back">← Voltar para a Página Inicial</a>
+    </main>
+
+    <!-- Widget Flutuante de Avaliação -->
+    <div class="feedback-flutuante" id="feedbackWidget">
+        <button type="button" class="feedback-close" onclick="fecharFeedback()" title="Fechar">×</button>
+        <p class="feedback-title">Este site foi útil para você?</p>
+        <div class="feedback-botoes" id="feedbackBotoes">
+            <button type="button" onclick="enviarFeedback('Sim')">👍 Sim</button>
+            <button type="button" onclick="enviarFeedback('Não')">👎 Não</button>
+        </div>
+        <p class="feedback-mensagem" id="feedbackMensagem" style="display: none;">
+            Obrigado pelo seu carinho! 💛
+        </p>
+    </div>
+
+    <footer class="footer-container">
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2026 Rosana A. Hayashi. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script de Funcionamento do Widget Flutuante -->
+    <script>
+        function enviarFeedback(opcao) {
+            document.getElementById('feedbackBotoes').style.display = 'none';
+            var msg = document.getElementById('feedbackMensagem');
+            
+            if (opcao === 'Sim') {
+                msg.textContent = 'Que ótimo! Muito obrigado! 💛';
+            } else {
+                msg.textContent = 'Obrigado pelo retorno! Vamos melhorar! 🙏';
+            }
+            msg.style.display = 'block';
+
+            // 🚀 ENVIO PARA O GOOGLE ANALYTICS
+            if (typeof gtag === 'function') {
+                gtag('event', 'feedback_resposta', {
+                    'opcao_escolhida': opcao,
+                    'pagina': window.location.pathname
+                });
+            } else {
+                console.warn('Google Analytics (gtag) não carregou.');
+            }
+
+            // Esconde automaticamente após 4 segundos
+            setTimeout(function() {
+                fecharFeedback();
+            }, 4000);
+        }
+
+        function fecharFeedback() {
+            var widget = document.getElementById('feedbackWidget');
+            widget.style.opacity = '0';
+            widget.style.transform = 'translateY(20px)';
+            setTimeout(function() {
+                widget.style.display = 'none';
+            }, 300);
+        }
+    </script>
+
+</body>
+</html>

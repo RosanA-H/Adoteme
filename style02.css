@@ -1,0 +1,254 @@
+/* ==================== Estilos Gerais ==================== */
+body {
+    background-image: url("images/sunshinedog.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================== Título Principal ==================== */
+h1.main-title {
+    text-align: center;
+    color: #071697;
+    font-size: 2.2em;
+    margin: 25px 15px 10px 15px;
+    text-shadow: 2px 2px 6px #000000;
+    font-family: 'Lucida Sans', 'Lucida Grande', Verdana, sans-serif;
+}
+
+/* ==================== Container de Contato (Azul Transparente) ==================== */
+.contact-container {
+    /* Fundo Azul Translúcido (Tom Azul Noturno / Oceano com transparência) */
+    background-color: rgba(10, 30, 60, 0.45); 
+    /* Efeito de Vidro Fosco (Blur) */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 35px 30px;
+    margin: 20px auto 30px auto;
+    max-width: 700px;
+    width: 90%;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 204, 0, 0.7);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.contact-container h2 {
+    color: #ffcc00;
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.contact-text {
+    font-size: 1.15em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+    font-weight: 500;
+}
+
+/* ==================== Ícones de Contato ==================== */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    font-size: 2em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    background-color: rgba(10, 25, 45, 0.7);
+}
+
+.contact-icon.whatsapp {
+    color: #25D366;
+    border: 2px solid #25D366;
+}
+
+.contact-icon.whatsapp:hover {
+    background-color: #25D366;
+    color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.6);
+}
+
+.contact-icon.email {
+    color: #ffcc00;
+    border: 2px solid #ffcc00;
+}
+
+.contact-icon.email:hover {
+    background-color: #ffcc00;
+    color: #111;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(255, 204, 0, 0.6);
+}
+
+.email-text strong {
+    color: #ffcc00;
+    font-size: 1.15em;
+    display: inline-block;
+    margin-top: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* ==================== Botão de Voltar ==================== */
+.button-back {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: 2px solid #ffcc00;
+    border-radius: 25px;
+    color: #ffcc00;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background-color: rgba(10, 25, 45, 0.7);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.button-back:hover {
+    background-color: #ffcc00;
+    color: #111;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(255, 204, 0, 0.5);
+}
+
+/* ==================== Widget Flutuante (Azul Transparente) ==================== */
+.feedback-flutuante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: rgba(10, 30, 60, 0.75);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid #ffcc00;
+    border-radius: 15px;
+    padding: 15px 20px;
+    z-index: 9999;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    max-width: 280px;
+    width: calc(100% - 50px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.feedback-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #ccc;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.feedback-close:hover {
+    color: #ffcc00;
+}
+
+.feedback-title {
+    font-size: 0.95em;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.feedback-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.feedback-botoes button {
+    background-color: rgba(10, 25, 45, 0.8);
+    color: #ffcc00;
+    border: 1px solid #ffcc00;
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.feedback-botoes button:hover {
+    background-color: #ffcc00;
+    color: #111;
+    transform: translateY(-2px);
+}
+
+.feedback-mensagem {
+    font-size: 0.9em;
+    color: #ffcc00;
+    margin: 5px 0 0 0;
+    font-weight: bold;
+}
+
+/* ==================== Rodapé ==================== */
+.footer-container {
+    width: 100%;
+    padding: 15px 0;
+    background-color: rgba(10, 25, 45, 0.85);
+    border-top: 1px solid #ffcc00;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px #000;
+}
+
+/* Responsividade para Celulares */
+@media screen and (max-width: 600px) {
+    h1.main-title {
+        font-size: 1.6em;
+    }
+    .contact-container {
+        padding: 25px 15px;
+    }
+    .contact-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.7em;
+    }
+    .button-back {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .feedback-flutuante {
+        bottom: 15px;
+        right: 15px;
+        left: 15px;
+        max-width: none;
+        width: auto;
+    }
+}
